@@ -1,0 +1,10 @@
+.text {
+    width: 500px;
+}
+
+@media screen and (max-width: 400px) {
+    .text {
+      text-align: center;
+      width: 250px;
+    }
+  }

@@ -1,0 +1,16 @@
+.note {
+    width : 18rem;
+    background: rgb(217, 239, 247);
+    margin-bottom: 1rem;
+}
+
+.notetext {
+    color: black;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.noteText {
+    font-weight: 500;
+    font-style: italic;
+}

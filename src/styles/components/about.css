@@ -1,0 +1,15 @@
+.personal {
+    margin-left: 23rem;
+}
+
+@media screen and (max-width : 900px){
+    .personal {
+        margin-left: 10rem;
+    }
+}
+
+@media screen and (max-width : 400px){
+    .personal {
+        margin: 0;
+    }
+}
