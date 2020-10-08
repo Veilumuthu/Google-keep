@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 class NoteForm extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            title : props.note ? props.note.title : '',
-            notes : props.note ? props.note.notes : ''
+            title: props.note ? props.note.title : '',
+            notes: props.note ? props.note.notes : ''
         }
     }
     onTitleChange = (e) => {
@@ -34,18 +34,32 @@ class NoteForm extends React.Component {
         const notes = this.state.notes;
         this.props.onSubmit({ title, notes });
         this.setState({
-            title : "",
-            notes : ""
+            title: "",
+            notes: ""
         })
     }
+
     render() {
+
         return (
             <div className="container">
-                <form className="text-center" style={{margin:"1rem"}} onSubmit={this.onSubmit}>
-                    <input id = "input" className="text" type="text" name="Title" placeholder="Title" onChange={this.onTitleChange} value={this.state.title} autoFocus/><br/>
-                    <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br/>
-                    <button style={{ backgroundColor: "green", color: "white"}}>Save</button>
+                <form className="text-center" style={{ margin: "1rem" }} onSubmit={this.onSubmit}>
+                    <input id="input" className="text" type="text" name="Title" placeholder="Title" onChange={this.onTitleChange} value={this.state.title} autoFocus /><br />
+                    <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br />
+                    <button style={{ backgroundColor: "green", color: "white" }}>Save</button>
                 </form>
+{ /*               <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Modal heading</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br />                    
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>Close</Button>
+                        <Button variant="primary" onClick={this.onSubmit}>Save Changes</Button>
+                    </Modal.Footer>
+                </Modal>*/}
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import database from '../firebase/firebase';
 
+//adding notes
 const addNotes = (note) => ({
     type: 'ADD_NOTES',
     note
@@ -22,6 +23,7 @@ export const startAddNotes = (notesData = {}) => {
     };
 }
 
+//editing note
 const editNotes = (id, update) => ({
     type: 'EDIT_NOTES',
     id,
@@ -36,6 +38,7 @@ export const startEditNotes = (id, update) => {
     }
 }
 
+//removing notes
 const removeNotes = ({id} = {}) => ({
     type:"REMOVE_NOTES",
     id
@@ -49,6 +52,7 @@ export const startRemoveNotes = ({id} = {}) => {
     }
 }
 
+//getting notes on screen
 const setNotes = (notes) => ({
     type : "SET_NOTES",
     notes
@@ -69,3 +73,10 @@ export const startSetNotes = () => {
         })
     }
 }
+
+//filters
+
+export const titleFilter = (title = "") => ({
+    type : "TITLE_FILTER",
+    title
+})
