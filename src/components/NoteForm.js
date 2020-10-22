@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 class NoteForm extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -28,6 +29,10 @@ class NoteForm extends React.Component {
     //         })
     //     }
     // }
+
+    onEnter = (e) => {
+        e.preventDefault()
+    }
     onSubmit = (e) => {
         e.preventDefault();
         const title = this.state.title;
@@ -40,26 +45,43 @@ class NoteForm extends React.Component {
     }
 
     render() {
-
         return (
             <div className="container">
-                <form className="text-center" style={{ margin: "1rem" }} onSubmit={this.onSubmit}>
-                    <input id="input" className="text" type="text" name="Title" placeholder="Title" onChange={this.onTitleChange} value={this.state.title} autoFocus /><br />
-                    <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br />
-                    <button style={{ backgroundColor: "green", color: "white" }}>Save</button>
+                <form className="text-center" style={{ margin: "1rem" }} onSubmit={this.onEnter}>
+                    <input
+                        id="input"
+                        className="text"
+                        type="text"
+                        name="Title"
+                        placeholder="Title"
+                        onChange={this.onTitleChange}
+                        value={this.state.title}
+                        autoFocus
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                    /><br />
+                    {/* <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br />
+                    <button style={{ backgroundColor: "green", color: "white" }}>Save</button> */}
                 </form>
-{ /*               <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Modal heading</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br />                    
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>Close</Button>
-                        <Button variant="primary" onClick={this.onSubmit}>Save Changes</Button>
-                    </Modal.Footer>
-                </Modal>*/}
+
+                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="exampleModalLabel"> {this.state.title}</h5>
+                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div className="modal-body">
+                                <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} style={{ width: "28rem" }} />
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-primary" onClick={this.onSubmit} data-dismiss="modal">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
