@@ -4,31 +4,28 @@ import { Row, Card, CardBody, CardText } from 'reactstrap';
 
 const About = () => {
     return (
-        <div className="container">
-            <Row>
-                <div className="text-center col-md-4" style={{ marginTop: "1rem" }}>
-                    <img src="muthu.jpeg" alt="Avatar" className="image" />
-                    <Footer />
-                </div>
-                <div className="col-md-8" style={{ marginTop: "1rem" }}>
-                    <Card className="kard">
-                        <CardBody>
-                            <CardText><strong style={{ fontSize: "2rem" }}>R.Veilu Muthu</strong></CardText>
-                            <CardText><strong style={{ fontSize: "1rem" }}>BE-Mechanical</strong></CardText>
-                            <CardText>As a fresher, i did two courses through Udemy, they are</CardText>
-                            <CardText>
-                                Python and Django Full Stack Bootcamp,
-                                The Complete React Course(W/ Hooks & Redux)
-                            </CardText>
-                        </CardBody>
-                    </Card>
-                </div>
-            </Row>
+        <div className="text-center" style={{ marginTop: "1rem" }}>
+            <img src="muthu.jpeg" alt="Avatar" width="200" heigth="200" />
+            <h2>Veilu Muthu R</h2>
+            <Footer />
         </div>
     )
 }
 
 export default About;
+// <div className="col-md-8" style={{ marginTop: "1rem" }}>
+//                     <Card className="kard">
+//                         <CardBody>
+//                             <CardText><strong style={{ fontSize: "2rem" }}>R.Veilu Muthu</strong></CardText>
+//                             <CardText><strong style={{ fontSize: "1rem" }}>BE-Mechanical</strong></CardText>
+//                             <CardText>As a fresher, i did two courses through Udemy, they are</CardText>
+//                             <CardText>
+//                                 Python and Django Full Stack Bootcamp,
+//                                 The Complete React Course(W/ Hooks & Redux)
+//                             </CardText>
+//                         </CardBody>
+//                     </Card>
+//                 </div>
 
 
         //     <div className="container personal">

@@ -1,20 +1,4 @@
-.personal {
-    margin-left: 23rem;
-}
-
-@media screen and (max-width : 900px){
-    .personal {
-        margin-left: 10rem;
-    }
-}
-
-@media screen and (max-width : 400px){
-    .personal {
-        margin: 0;
-    }
-}
-
-.kard{
+/* .kard{
     position: absolute;
     width: 30rem;
     height: 15rem;
@@ -27,7 +11,8 @@
 }
 
 .image{
-    width: 100%;
+    align-items: center;
+    width: 50rem;
     height: 20rem;
     border-radius: 0.2em;
-}
+} */
