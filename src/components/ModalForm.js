@@ -36,10 +36,10 @@ const ModalForm = (props) => {
                 {/* <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br />
     <button style={{ backgroundColor: "green", color: "white" }}>Save</button> */}
             </form>
-            <Modal isOpen={modal} toggle={toggle}>
+            <Modal className="box" isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>{props.title}</ModalHeader>
                 <ModalBody>
-                    <textarea name="notes" placeholder="Take a note" onChange={props.onNotesChange} value={props.notes} style={{ width: "450px" }} /><br />
+                    <textarea className="textarea" name="notes" placeholder="Take a note" onChange={props.onNotesChange} value={props.notes} /><br />
                 </ModalBody>
                 <ModalFooter>
                     <button type="button" className="btn btn-primary" onClick={onSubmit}>Save changes</button>

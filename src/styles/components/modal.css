@@ -1,0 +1,13 @@
+.textarea {
+    width : 450px;
+}
+
+@media screen and (max-width: 400px) {
+    .box {
+      text-align: center;
+      width: 320px;
+    }
+    .textarea {
+      width: 250px;
+    }
+  }

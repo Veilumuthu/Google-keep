@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../navbar/footer';
-import { Row, Card, CardBody, CardText } from 'reactstrap';
+// import { Row, Card, CardBody, CardText } from 'reactstrap';
 
 const About = () => {
     return (
