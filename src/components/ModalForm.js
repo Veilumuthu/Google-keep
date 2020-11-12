@@ -33,8 +33,6 @@ const ModalForm = (props) => {
                     autoFocus
                     onKeyPress={handleKeyPress}
                 /><br />
-                {/* <textarea className="text" name="notes" placeholder="Take a note" onChange={this.onNotesChange} value={this.state.notes} /><br />
-    <button style={{ backgroundColor: "green", color: "white" }}>Save</button> */}
             </form>
             <Modal className="box" isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>{props.title}</ModalHeader>

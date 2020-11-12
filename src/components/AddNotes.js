@@ -17,7 +17,7 @@ const AddNotes = ({ startAddNotes, history }) => {
         <div>
             <Header title={title} subtitle={subtitle} />
             <div className="container">
-                <NoteForm onSubmit={onSubmit}/>
+                <NoteForm onSubmit={onSubmit} />
                 <NotesList />
             </div>
         </div>
@@ -28,4 +28,4 @@ const mapDispatchToProps = (dispatch) => ({
     startAddNotes: (note) => dispatch(startAddNotes(note))
 })
 
-export default connect (undefined, mapDispatchToProps)(AddNotes);
+export default connect(undefined, mapDispatchToProps)(AddNotes);

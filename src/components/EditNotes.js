@@ -15,25 +15,27 @@ const EditNotes = (props) => {
     // }
     return (
         <div>
-            <NoteForm note={props.note} onSubmit={onSubmit}/>
-            <button className="but" onClick={() => {
-                props.startRemoveNotes({ id: props.note.id })
-                props.history.push('/')
-            }}>Remove</button>
+            <NoteForm note={props.note} onSubmit={onSubmit} />
+            <div className="text-center">
+                <button className="but" onClick={() => {
+                    props.startRemoveNotes({ id: props.note.id })
+                    props.history.push('/notes')
+                }}>Remove</button>
+            </div>
         </div>
     )
 }
 
 const props = (state, props) => {
     return {
-        note : state.notes.find((note) => note.id === props.match.params.id)
+        note: state.notes.find((note) => note.id === props.match.params.id)
     }
 }
 
 const mapProps = (dispatch) => {
     return {
-        startEditNotes : (id, note) => dispatch(startEditNotes(id,note)),
-        startRemoveNotes : (data) => dispatch(startRemoveNotes(data))
+        startEditNotes: (id, note) => dispatch(startEditNotes(id, note)),
+        startRemoveNotes: (data) => dispatch(startRemoveNotes(data))
     }
 }
 

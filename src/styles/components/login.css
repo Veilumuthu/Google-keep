@@ -1,0 +1,30 @@
+.login{
+    align-items: center;
+    background: url("/images/login2.jpeg");
+    background-size: cover;
+    color: #12064f;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loginlog {
+    background : fade-out(white, .15);
+    border-radius: 3px;
+    padding: 3.2rem 4.8rem;
+    text-align: center;
+    width: 25rem;
+}
+
+.loginbut{
+    background: #7ee66a;
+    border: none;
+    color: #12064f;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 1.2rem;
+    border-radius: 10px;
+}

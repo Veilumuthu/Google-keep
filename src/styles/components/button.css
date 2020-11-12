@@ -1,23 +1,29 @@
 .but {
     background: rgb(4, 74, 97);
     color: white;
-    margin-left: 31.5rem;
     width: 100px;
 }
+.butnav{
+    background: none;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+/* 
 @media screen and (max-width : 900px){
     .but {
         background: rgb(4, 74, 97);
         color: white;
-        margin-left: 18.5rem;
+        align-items: center;
         width: 100px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .but {
         background: rgb(4, 74, 97);
         color: white;
-        margin-left: 7rem;
+        align-items: center;
         width: 100px;
     }
-  }
+  } */
